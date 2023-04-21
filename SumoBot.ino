@@ -14,13 +14,13 @@
 QTRSensors qtr;
 SharpIR sensor(SharpIR::GP2Y0A21YK0F, A0);
 
-const uint8_t SensorCount = 3;
+const uint8_t SensorCount = 4;
 uint16_t sensorValues[SensorCount];
 
 // Arena Settings
 #define BLK 700             // Arena Color Value - ??? (Higher)
 #define WHT 80              // Border Color Value - ??? (Lower)
-#define QTR_THRESHOLD 1500  // microseconds (need tuning per each environment)
+#define QTR_THRESHOLD 750  // microseconds (need tuning per each environment)
 
 // Speed Settings
 #define speedTurn 80       // Default - 80
@@ -46,7 +46,7 @@ uint16_t sensorValues[SensorCount];
 void setup() {
   Serial.begin(9600);
   qtr.setTypeRC();
-  qtr.setSensorPins((const uint8_t[]){ A1, A2, A3 }, SensorCount);
+  qtr.setSensorPins((const uint8_t[]){ A1, A2, A3, A4 }, SensorCount);
   qtr.setEmitterPin(2);
   pinMode(PWMA, OUTPUT);
   pinMode(AIN1, OUTPUT);
@@ -54,6 +54,7 @@ void setup() {
   pinMode(PWMB, OUTPUT);
   pinMode(BIN1, OUTPUT);
   pinMode(BIN2, OUTPUT);
+  delay(3000);
 }
 
 void loop() {
@@ -79,7 +80,7 @@ void loop() {
     delay(250);
     move(1, speedForward, 1);
     move(0, speedForward, 1);
-  } else if (sensorValues[2] < QTR_THRESHOLD) {
+  } else if (sensorValues[3] < QTR_THRESHOLD) {
     // Rightmost Sensor Detected The Border
     move(1, speedBackward, 0);
     move(0, speedBackward, 0);
