@@ -20,13 +20,13 @@ uint16_t sensorValues[SensorCount];
 // Arena Settings
 #define BLK 700             // Arena Color Value - ??? (Higher)
 #define WHT 80              // Border Color Value - ??? (Lower)
-#define QTR_THRESHOLD 750  // microseconds (need tuning per each environment)
+#define QTR_THRESHOLD 150  // microseconds (need tuning per each environment)
 
 // Speed Settings
 #define speedTurn 80       // Default - 80
 #define speedForward 150   // Default - 255
 #define speedBackward 150  // Default - 255
-#define speedCharge 255    // Default - 255
+#define speedCharge 220    // Default - 255
 
 // Left Motor Pins
 #define PWMA 5   // speedControl
@@ -74,20 +74,20 @@ void loop() {
     // Leftmost Sensor Detected the Border
     move(1, speedBackward, 0);
     move(0, speedBackward, 0);
-    delay(250);
+    delay(750);
     move(1, speedTurn, 1);
     move(0, speedTurn, 0);
-    delay(250);
+    delay(500);
     move(1, speedForward, 1);
     move(0, speedForward, 1);
-  } else if (sensorValues[3] < QTR_THRESHOLD) {
+  } else if (sensorValues[2] < QTR_THRESHOLD) {
     // Rightmost Sensor Detected The Border
     move(1, speedBackward, 0);
     move(0, speedBackward, 0);
-    delay(250);
+    delay(750);
     move(1, speedTurn, 0);
     move(0, speedTurn, 1);
-    delay(250);
+    delay(500);
     move(1, speedForward, 1);
     move(0, speedForward, 1);
   } else {
@@ -97,20 +97,23 @@ void loop() {
       move(0, speedCharge, 1);
     } else {
 // Idle Search
-idleSearch:
+/* idleSearch:
       move(1, speedForward, 1);
       move(0, speedForward, 1);
-      delay(500);
+      delay(1000);
       move(1, speedTurn, 1);
       move(0, speedTurn, 0);
-      delay(50);
+      delay(250);
       move(1, speedForward, 1);
       move(0, speedForward, 1);
-      delay(500);
+      delay(1000);
       move(1, speedTurn, 0);
       move(0, speedTurn, 1);
-      delay(50);
-      goto idleSearch;
+      delay(250);
+      goto idleSearch; */
+
+      move(1, speedForward, 1);
+      move(0, speedForward, 1);
     }
   }
 }
