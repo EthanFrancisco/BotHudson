@@ -14,8 +14,8 @@
 
 QTRSensors qtr;
 SharpIR sensor(SharpIR::GP2Y0A21YK0F, A0);
-Ultrasonic ultrasonic1(4, 7); // Left Ultrasonic
-Ultrasonic ultrasonic2(10, 13); // Right Ultrasonic
+Ultrasonic ultrasonic1(6, 7); // Left Ultrasonic (Trig, Echo)
+Ultrasonic ultrasonic2(10, 13); // Right Ultrasonic (Trig, Echo)
 
 const uint8_t SensorCount = 4;
 uint16_t sensorValues[SensorCount];
@@ -40,11 +40,6 @@ uint16_t sensorValues[SensorCount];
 #define PWMB 3  // speedControl
 #define BIN1 9  // pinDirection
 #define BIN2 8  // pinDirection
-
-// Sensor Pin Configuration
-#define IROutput A0  // SharpIR
-//#define USTrig 12    // Ultrasonic Trig
-//#define USEcho A3    // Ultrasonic Echo
 
 void setup() {
   Serial.begin(9600);
