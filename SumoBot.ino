@@ -26,10 +26,10 @@ uint16_t sensorValues[SensorCount];
 #define QTR_THRESHOLD 250  // microseconds (need tuning per each environment)
 
 // Speed Settings
-#define speedTurn 80       // Default - 80
+#define speedTurn 100       // Default - 80
 #define speedForward 150   // Default - 255
 #define speedBackward 150  // Default - 255
-#define speedCharge 220    // Default - 255
+#define speedCharge 150    // Default - 255
 
 // Left Motor Pins
 #define PWMA 5   // speedControl
@@ -86,7 +86,7 @@ void loop() {
     delay(750);
     move(1, speedTurn, 0);
     move(0, speedTurn, 1);
-    delay(900);
+    delay(500);
     move(1, speedForward, 1);
     move(0, speedForward, 1);
   } else if (sensorValues[3] < QTR_THRESHOLD) {
@@ -96,7 +96,7 @@ void loop() {
     delay(750);
     move(1, speedTurn, 1);
     move(0, speedTurn, 0);
-    delay(900);
+    delay(500);
     move(1, speedForward, 1);
     move(0, speedForward, 1);
   } else {
