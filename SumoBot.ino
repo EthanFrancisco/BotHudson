@@ -23,7 +23,7 @@ uint16_t sensorValues[SensorCount];
 // Arena Settings
 #define BLK 700             // Arena Color Value - ??? (Higher)
 #define WHT 80              // Border Color Value - ??? (Lower)
-#define QTR_THRESHOLD 160  // microseconds (need tuning per each environment)
+#define QTR_THRESHOLD 175  // microseconds (need tuning per each environment)
 
 // Speed Settings
 #define speedTurn 180       // Default - 80
@@ -59,7 +59,7 @@ void setup() {
   pinMode(PWMB, OUTPUT);
   pinMode(BIN1, OUTPUT);
   pinMode(BIN2, OUTPUT);
-  delay(3000);
+  delay(1500);
 }
 
 void loop() {

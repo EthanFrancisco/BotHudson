@@ -75,10 +75,10 @@ void setup() {
   pinMode(PWMB, OUTPUT);
   pinMode(BIN1, OUTPUT);
   pinMode(BIN2, OUTPUT);
-  delay(500);
+  // delay(500); // Default - 500
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);
-  delay(1500); // Initial Delay
+  delay(250); // Initial Delay Default - 1500
 
   // Sensor Calibration
   int i;
@@ -91,9 +91,9 @@ void setup() {
       move(1, 80, 1);
     }
     qtr.calibrate();
-    delay(20);
+    delay(10); // Default - 20
   }
-  delay(500); // Post-Calibration Delay
+  delay(500); // Post-Calibration Delay Default - 500
 }
 
 void loop() {
