@@ -54,4 +54,4 @@ Current Supported modules:
 ## License
 The BotHudson Repository by Ethan Francisco is licensed under a [MIT License](https://opensource.org/license/mit/).\
 Feel free to contact the author on Twitter. [@MrEthanooo](https://twitter.com/MrEthanooo)\
-The license text can be found in the [LICENSE.md](https://github.com/EthanFrancisco/BotHudson/blob/main/LICENSE) file for details.
+The license text can be found in the [LICENSE.md](https://github.com/EthanFrancisco/BotHudson/blob/main/LICENSE.md) file for details.
