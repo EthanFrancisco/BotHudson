@@ -52,5 +52,6 @@ Current Supported modules:
 > Authored by Erick Simoes, "[Ultrasonic](https://github.com/ErickSimoes/Ultrasonic)".
 
 ## License
-The BotHudson Repository by Ethan Francisco is licensed under a [MIT License]([https://www.gnu.org/licenses/agpl-3.0.html](https://opensource.org/license/mit/)). Feel free to contact the author on Twitter. [@MrEthanooo](https://twitter.com/MrEthanooo)\
+The BotHudson Repository by Ethan Francisco is licensed under a [MIT License](https://opensource.org/license/mit/).\
+Feel free to contact the author on Twitter. [@MrEthanooo](https://twitter.com/MrEthanooo)\
 The license text can be found in the [LICENSE.md](https://github.com/EthanFrancisco/BotHudson/blob/main/LICENSE) file for details.
