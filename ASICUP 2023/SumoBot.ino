@@ -1,9 +1,7 @@
 /*
-
   Francisco, Ethan Philip T.
   04/20/2023
   BotHudson Sumobot
-
 */
 
 // Remove all serials syntax before competition
@@ -14,7 +12,7 @@
 
 QTRSensors qtr;
 SharpIR sensor(SharpIR::GP2Y0A21YK0F, A0);
-Ultrasonic ultrasonic1(4, 7); // Left Ultrasonic
+Ultrasonic ultrasonic1(4, 7);   // Left Ultrasonic
 Ultrasonic ultrasonic2(10, 13); // Right Ultrasonic
 
 const uint8_t SensorCount = 4;
@@ -23,13 +21,13 @@ uint16_t sensorValues[SensorCount];
 // Arena Settings
 #define BLK 700             // Arena Color Value - ??? (Higher)
 #define WHT 80              // Border Color Value - ??? (Lower)
-#define QTR_THRESHOLD 175  // microseconds (need tuning per each environment)
+#define QTR_THRESHOLD 175   // microseconds (need tuning per each environment)
 
 // Speed Settings
 #define speedTurn 180       // Default - 80
-#define speedForward 150   // Default - 255
-#define speedBackward 150  // Default - 255
-#define speedCharge 150    // Default - 255
+#define speedForward 150    // Default - 255
+#define speedBackward 150   // Default - 255
+#define speedCharge 150     // Default - 255
 
 // Left Motor Pins
 #define PWMA 5   // speedControl
