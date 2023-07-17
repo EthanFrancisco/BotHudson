@@ -1,9 +1,7 @@
 /*
-
   Francisco, Ethan Philip T.
   04/17/2023
   PID Algorithm for Line Follower Mobot
-
 */
 
 #include <QTRSensors.h> // QTR library
@@ -12,44 +10,21 @@ QTRSensors qtr;
 const uint8_t SensorCount = 5; // No of sensors
 uint16_t sensorValues[SensorCount];
 
-#define Kp 1          // Proportional Default - 2
-#define Kd 70         // Derivative Default - 40
-#define MaxSpeed 188  // Default 255
-#define BaseSpeed 148 // Default - 155
+#define Kp 1           // Proportional Default - 2
+#define Kd 70          // Derivative Default - 40
+#define MaxSpeed 188   // Default 255
+#define BaseSpeed 148  // Default - 155
 #define speedturn 112  // Default - 100
 
 /*
-
 Optimal presets for ASICUP competition
 
-ethan's
-Kp = 2
-Kd = 40
-mS = 210
-bS = 170
-st = 110
-
-ethan's 2nd
-Kp = 1
-Kd = 70
-mS = 188
-bS = 148
-st = 112
-
-louis'
-Kp = 1
-Kd = 62
-mS = 218
-bS = 168
-st = 112
-
-deretso sa box (experimental)
-Kp = 1
-Kd = 90
-mS = 235
-bS = 155
-st = 120
-
+ethan's    ethan's 2nd  louis'
+Kp = 2     Kp = 1       Kp = 1
+Kd = 40    Kd = 70      Kd = 62
+mS = 210   mS = 188     mS = 218
+bS = 170   bS = 148     bS = 168
+st = 110   st = 112     st = 112
 */
 
 // Left Motor Pins
