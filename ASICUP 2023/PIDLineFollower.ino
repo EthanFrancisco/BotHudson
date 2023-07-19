@@ -1,5 +1,4 @@
 /*
-  Francisco, Ethan Philip T.
   04/17/2023
   PID Algorithm for Line Follower Mobot
 */

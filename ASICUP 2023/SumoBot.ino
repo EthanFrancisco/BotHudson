@@ -1,5 +1,4 @@
 /*
-  Francisco, Ethan Philip T.
   04/20/2023
   BotHudson Sumobot
 */

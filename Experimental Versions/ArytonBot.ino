@@ -1,5 +1,4 @@
 /*
-    Francisco, Ethan Philip T.
     07/18/2023
     Experimental PID Algorithm with Gyro Accelerometer (MPU-6050) for Line Follower
 
@@ -151,7 +150,7 @@ void loop() {
     float SensorArraySum = 0;
     float SensorArrayAvg = 0;
     for (int i = 0; i < SensorCount; i++) {
-        sum += sensorValues[i];
+        SensorArraySum += sensorValues[i];
     }
     SensorArrayAvg = SensorArraySum / SensorCount;
 
