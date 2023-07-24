@@ -145,6 +145,9 @@ void loop() {
     sensorValues[6] = constrain(sensorValues[6], 0, 100);
     sensorValues[7] = constrain(sensorValues[7], 0, 100);
 
+    // use the documentation from pololu qtr
+    // https://pololu.github.io/qtr-sensors-arduino/class_q_t_r_sensors.html#a8f2a5239ae547928284c5f81cd7ec89c
+
     // Equivalent of qtr.readLineBlack(sensorValues); from ASICUP 2023
     int SensorCount = sizeof(sensorValues) / sizeof(sensorValues[]);
     float SensorArraySum = 0;

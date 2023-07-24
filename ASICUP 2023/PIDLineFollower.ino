@@ -67,7 +67,7 @@ void setup() {
     qtr.calibrate();
     delay(10); // Default - 20
   }
-  delay(500); // Post-Calibration Delay Default - 500
+  delay(500);  // Post-Calibration Delay Default - 500
 }
 
 void loop() {
