@@ -32,10 +32,10 @@ int BIN2 = 8;
 
 // Sensor Data
 int lastError = 0;
-int sensor[7] = {A0, A1, A2, A3, A4, A5, A6, A7};
-int sensorMin[7] = {1023};
-int sensorMax[7] = {0};
-int sensorValues[7] = {0};
+int sensor[6] = {A0, A1, A2, A3, A4, A5};
+int sensorValues[] = {0};
+int sensorMin = 1023;
+int sensorMax = 0;
 
 void setup() {
     pinMode(PWMA, OUTPUT);
@@ -61,57 +61,47 @@ void setup() {
         sensorValues[7] = analogRead(sensor[7]);
 
         // Record Maximum Sensor Values
-        if (sensorValues[0] > sensorMax[0]) {
-            sensorMax[0] = sensorValues[0];
+        if (sensorValues[0] > sensorMax) {
+            sensorMax = sensorValues[0];
         }
-        if (sensorValues[1] > sensorMax[1]) {
-            sensorMax[1] = sensorValues[1];
+        if (sensorValues[1] > sensorMax) {
+            sensorMax = sensorValues[1];
         }
-        if (sensorValues[2] > sensorMax[2]) {
-            sensorMax[2] = sensorValues[2];
+        if (sensorValues[2] > sensorMax) {
+            sensorMax = sensorValues[2];
         }
-        if (sensorValues[3] > sensorMax[3]) {
-            sensorMax[3] = sensorValues[3];
+        if (sensorValues[3] > sensorMax) {
+            sensorMax = sensorValues[3];
         }
-        if (sensorValues[4] > sensorMax[4]) {
-            sensorMax[4] = sensorValues[4];
+        if (sensorValues[4] > sensorMax) {
+            sensorMax = sensorValues[4];
         }
-        if (sensorValues[5] > sensorMax[5]) {
-            sensorMax[5] = sensorValues[5];
-        }
-        if (sensorValues[6] > sensorMax[6]) {
-            sensorMax[6] = sensorValues[6];
-        }
-        if (sensorValues[7] > sensorMax[7]) {
-            sensorMax[7] = sensorValues[7];
+        if (sensorValues[5] > sensorMax) {
+            sensorMax = sensorValues[5];
         }
 
         // Record Minimum Sensor Values
-        if (sensorValues[0] < sensorMin[0]) {
-            sensorMin[0] = sensorValues[0];
+        if (sensorValues[0] < sensorMin) {
+            sensorMin = sensorValues[0];
         }
-        if (sensorValues[1] < sensorMin[1]) {
-            sensorMin[1] = sensorValues[1];
+        if (sensorValues[1] < sensorMin) {
+            sensorMin = sensorValues[1];
         }
-        if (sensorValues[2] < sensorMin[2]) {
-            sensorMin[2] = sensorValues[2];
+        if (sensorValues[2] < sensorMin) {
+            sensorMin = sensorValues[2];
         }
-        if (sensorValues[3] < sensorMin[3]) {
-            sensorMin[3] = sensorValues[3];
+        if (sensorValues[3] < sensorMin) {
+            sensorMin = sensorValues[3];
         }
-        if (sensorValues[4] < sensorMin[4]) {
-            sensorMin[4] = sensorValues[4];
+        if (sensorValues[4] < sensorMin) {
+            sensorMin = sensorValues[4];
         }
-        if (sensorValues[5] < sensorMin[5]) {
-            sensorMin[5] = sensorValues[5];
-        }
-        if (sensorValues[6] < sensorMin[6]) {
-            sensorMin[6] = sensorValues[6];
-        }
-        if (sensorValues[7] < sensorMin[7]) {
-            sensorMin[7] = sensorValues[7];
+        if (sensorValues[5] < sensorMin) {
+            sensorMin = sensorValues[5];
         }
     }
+
+    // readLine equation
 }
 
 void loop() {
@@ -122,28 +112,22 @@ void loop() {
     sensorValues[3] = analogRead(sensor[3]);
     sensorValues[4] = analogRead(sensor[4]);
     sensorValues[5] = analogRead(sensor[5]);
-    sensorValues[6] = analogRead(sensor[6]);
-    sensorValues[7] = analogRead(sensor[7]);
     // Maps data to recieved data during calibration period, identifying line
     // Will impliment further range by following 1000 * (No. of sensor - 1) from QTR library
-    sensorValues[0] = map(sensorValues[0], sensorMin[0], sensorMax[0], 0, 100);
-    sensorValues[1] = map(sensorValues[1], sensorMin[1], sensorMax[1], 0, 100);
-    sensorValues[2] = map(sensorValues[2], sensorMin[2], sensorMax[2], 0, 100);
-    sensorValues[3] = map(sensorValues[3], sensorMin[3], sensorMax[3], 0, 100);
-    sensorValues[4] = map(sensorValues[4], sensorMin[4], sensorMax[4], 0, 100);
-    sensorValues[5] = map(sensorValues[5], sensorMin[5], sensorMax[5], 0, 100);
-    sensorValues[6] = map(sensorValues[6], sensorMin[6], sensorMax[6], 0, 100);
-    sensorValues[7] = map(sensorValues[7], sensorMin[7], sensorMax[7], 0, 100);
+    sensorValues[0] = map(sensorValues[0], sensorMin, sensorMax, 0, 1000);
+    sensorValues[1] = map(sensorValues[1], sensorMin, sensorMax, 0, 1000);
+    sensorValues[2] = map(sensorValues[2], sensorMin, sensorMax, 0, 1000);
+    sensorValues[3] = map(sensorValues[3], sensorMin, sensorMax, 0, 1000);
+    sensorValues[4] = map(sensorValues[4], sensorMin, sensorMax, 0, 1000);
+    sensorValues[5] = map(sensorValues[5], sensorMin, sensorMax, 0, 1000);
     // Keeps data within requested range
     // Will impliment further range by following 1000 * (No. of sensor - 1) from QTR library
-    sensorValues[0] = constrain(sensorValues[0], 0, 100);
-    sensorValues[1] = constrain(sensorValues[1], 0, 100);
-    sensorValues[2] = constrain(sensorValues[2], 0, 100);
-    sensorValues[3] = constrain(sensorValues[3], 0, 100);
-    sensorValues[4] = constrain(sensorValues[4], 0, 100);
-    sensorValues[5] = constrain(sensorValues[5], 0, 100);
-    sensorValues[6] = constrain(sensorValues[6], 0, 100);
-    sensorValues[7] = constrain(sensorValues[7], 0, 100);
+    sensorValues[0] = constrain(sensorValues[0], 0, 1000);
+    sensorValues[1] = constrain(sensorValues[1], 0, 1000);
+    sensorValues[2] = constrain(sensorValues[2], 0, 1000);
+    sensorValues[3] = constrain(sensorValues[3], 0, 1000);
+    sensorValues[4] = constrain(sensorValues[4], 0, 1000);
+    sensorValues[5] = constrain(sensorValues[5], 0, 1000);
 
     // use the documentation from pololu qtr
     // https://pololu.github.io/qtr-sensors-arduino/class_q_t_r_sensors.html#a8f2a5239ae547928284c5f81cd7ec89c
