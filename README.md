@@ -3,7 +3,7 @@
 Line follower and Sumo mobots for ASICUP Competition.
 
 # Introduction
-Line follower mobot is a mobile robot that can detect and follow the line drawn on the floor. Sumobot is a sport in which two robots attempt to push each other out of a circle (in a similar fashion to the sport of sumo). It is designed for competing in ASICUP (Agility, Strength, Intelligence) which is takes place annualy at the University of the East - Caloocan that is open to any major courses with maximum of 4 members while the mobots are limited to the dimensions 15 cm x 15 cm x 15 cm, with maximum weight of 3 kgs. Both of the Line follower and Sumobot are fully tunable for every competition they may take part.
+Line follower mobot is a mobile robot that can detect and follow the line drawn on the floor. Sumobot is a sport in which two robots attempt to push each other out of a circle (in a similar fashion to the sport of sumo). It is designed for competing in ASICUP (Agility, Strength, Intelligence) which is takes place annualy at the University of the East - Caloocan that is open to any major courses with maximum of 4 members while the mobots are limited to the dimensions 20 cm x 20 cm x 20 cm (2024); 15 cm x 15 cm x 15 cm (2023), with maximum weight of 1.5 kgs (2024); 3 kgs (2023). Both of the Line follower and Sumobot are fully tunable for every competition they may take part.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/69707914/235178001-e73297c8-888e-413a-9ebc-ebc72bcb7b5f.png" alt="BotHudson Line Follower and SumoBot" width="500">
