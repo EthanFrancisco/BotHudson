@@ -1,3 +1,7 @@
+/*
+	18/04/2023
+	SumoBot with 3 SharpIR Sensors for Enemy Detection
+*/
 #include <math.h>
 #include <SharpIR.h>
 #include <QTRSensors.h>
@@ -15,7 +19,7 @@ uint16_t sensorValues[SensorCount];
 
 // Speed Settings
 #define speedTurn 190		// Default - 190
-#define speedForward 165	    // Default - 165
+#define speedForward 165	// Default - 165
 #define speedBackward 120	// Default - 120
 #define speedCharge 255		// Default - 255
 
