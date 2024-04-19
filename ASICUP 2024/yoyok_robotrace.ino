@@ -9,9 +9,9 @@ QTRSensors qtr;
 const uint8_t SensorCount = 8;	// No. of sensors
 uint16_t sensorValues[SensorCount];
 
-#define Kp 0.2			// Proportional Default - 0.2
-#define Kd 4			// Derivative Default - 4
-#define Ksr 0			// Speed Reduction Default - 0
+#define Kp 0.2		// Proportional Default - 0.2
+#define Kd 4		// Derivative Default - 4
+#define Ksr 0		// Speed Reduction Default - 0
 #define MaxSpeed 255	// Default - 255
 #define BaseSpeed 255	// Default - 255
 #define speedturn 255	// Default - 255
