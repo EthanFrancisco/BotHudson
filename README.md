@@ -7,11 +7,13 @@ Line follower mobot is a mobile robot that can detect and follow the line drawn 
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/69707914/235178001-e73297c8-888e-413a-9ebc-ebc72bcb7b5f.png" alt="BotHudson Line Follower and SumoBot" width="500">
+<img src="https://github.com/EthanFrancisco/BotHudson/assets/69707914/f4e7af3c-dd8a-4d48-a125-0a0b76293786" alt="yoyok robotrace and sumobot" width="500">
+
 </p>
 
 ---
 
-The competition is a part of the 3rd Year ECE students' projects while encouraged 2nd and 4th Year students to compete organized by [ECES-IECEP (University of the East - Caloocan)](https://www.facebook.com/eces.iecep/).
+The competition is a part of the 3rd Year ECE students' projects while encouraged other courses of all year levels to compete organized by [ECES-IECEP (University of the East - Caloocan)](https://www.facebook.com/eces.iecep/).
 
 ## Installation
 ```
