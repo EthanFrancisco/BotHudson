@@ -11,8 +11,8 @@ constexpr int SensorCount = 8;
 #define userButton 0
 #define CENTER_POSITION 3500
 
-int PWMA = 6, AIN1 = 5, AIN2 = 4;
-int PWMB = 3, BIN1 = 2, BIN2 = 1;
+int PWMA = 6, AIN1 = 4, AIN2 = 5;
+int PWMB = 3, BIN1 = 1, BIN2 = 2;
 
 class Motor {
   private:
@@ -98,6 +98,10 @@ class LineFollower {
       while (digitalRead(userButton) == HIGH) {
         leftMotor->stop();
         rightMotor->stop();
+      }
+      delay(50);
+      while (digitalRead(userButton) == LOW) {
+
       }
       delay(1000);
     }
